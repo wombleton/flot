@@ -1,6 +1,6 @@
 # Makefile for generating minified files
 
-YUICOMPRESSOR_PATH=../yuicompressor-2.3.5.jar
+YUICOMPRESSOR_PATH=../yuicompressor-2.4.2.jar
 
 # if you need another compressor path, just copy the above line to a
 # file called Makefile.local, customize it and you're good to go
@@ -8,7 +8,7 @@ YUICOMPRESSOR_PATH=../yuicompressor-2.3.5.jar
 
 .PHONY: all
 
-# we cheat and process all .js files instead of listing them
+# we cheat and process all .js files instead of an exhaustive list
 all: $(patsubst %.js,%.min.js,$(filter-out %.min.js,$(wildcard *.js)))
 
 %.min.js: %.js
